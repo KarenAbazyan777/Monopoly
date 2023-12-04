@@ -1,38 +1,1052 @@
-.App {
-  text-align: center;
+*{
+    
+    box-sizing: border-box;
+    background-color: rgb(21, 91, 21);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+    padding: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root{
+    /* --widthh: calc((100% / 11) - 1.33px);
+    --widthhh: calc((100% / 11) * 5) */
+    --win: rgb(174, 174, 18);
+    --lose: red;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.full-lines  {
+    height: 10vh;
+    display: grid;
+    grid-template-columns:repeat(11,1fr) ;
+   
 }
 
-.App-link {
-  color: #61dafb;
+.full-lines div{
+    height: 10vh;
+    /* background-color: black; */
+    /* border: 1px solid white; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fourth-line, .fifth-line, .sixth-line, .seventh-line, .eighth-line, .nineth-line, .tenth-line{
+    height: 10vh;
+    display: grid;
+    grid-template-columns:repeat(11,1fr) ;
+   
 }
+
+.fourth-line  div, .fifth-line div,  .sixth-line div, .seventh-line div, .eighth-line div,.nineth-line div,  .tenth-line div{
+    
+    height: 10vh;
+    /* background-color: black; */
+    border: 1px solid white;
+}
+
+.item1-fl, .item1-fivel, .item1-sixl, .item1-sl, .item1-el, .item1-tl {
+    grid-column: 1/2;
+}
+
+.item1-nl {
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    border: 1px solid white;
+    background-image: url(../logos/mercedes.webp);
+    grid-column: 1/2;
+}
+
+
+.item2-nl{
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    position: relative;
+    grid-column: 3/4;
+    background-image: url(../logos/vegas.png);
+    background-color: black ;
+}
+
+.item2-fl, .item2-fivel, .item2-sixl {
+    grid-column: 2/3;
+}
+
+.item3-fl, .item3-fivel, .item3-sixl, .item2-sl, .item2-el{
+    grid-column: 3/4;
+}
+
+.item3-nl {
+    grid-column: 4/5;
+}
+.item7-nl {
+    grid-column: 8/9;
+}
+
+.item4-fl, .item4-fivel, .item4-sixl, .item3-sl, .item3-el, .item8-nl{
+    grid-column: 9/10;
+}
+
+.item5-sixl {
+
+    grid-column: 10/11;
+}
+
+.item5-fl, .item5-fivel, .item6-sixl, .item4-sl, .item4-el, .item9-nl, .item3-tl {
+    grid-column: 11/12;
+}
+
+.center {
+    display: grid;
+    height: 50vh;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(5, 1fr)
+}
+
+.item{
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    border: 1px solid white;
+}
+
+.t34 {
+    border-top: 1px solid black;
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-position: center;    
+    background-image: url(../logos/lg.svg);
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.t35 {
+    border-radius: 60%;
+    border: none;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.t35 b {
+    color: white;
+    background: none;
+    font-size: 10vh;
+}
+
+.t36 {
+    border-top: 1px solid black;
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/adobe.webp);
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.t37 {
+    
+    background-color: rgb(21, 91, 21);
+    grid-column: 4/9;
+    grid-row: 1/6;
+}
+
+.t38 {
+    position: relative;
+    background-color: #f12121;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/eliLilly.webp);
+    grid-column: 9/10;
+    grid-row: 1/2;
+}
+
+.t39 {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-color: black;
+    background-image: url(../logos/dior.webp);
+    grid-column: 11/12;
+    grid-row: 1/2;
+}
+
+.t40 {
+    position: relative;
+    background-image: url(../logos/lotto.jpg);
+    border-top: 1px solid black;
+    background-color: white;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.t41 {
+    border: none;
+    /* background: none; */
+    border-radius: 60%;
+    position: relative;
+    background-image: url(../logos/brime.png);
+    border-top: 1px solid black;
+    background-color: white;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.t42 {
+    position: relative;
+    background-color: #e9e5e5;
+    border-top: 1px solid black;
+    background-image: url(../logos/toyota.webp);
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.t43 {
+    position: relative;
+    background-color: white;
+    background-image: url(../logos/hospital.jpg);
+    grid-column: 9/10;
+    grid-row: 2/3;
+}
+
+.t44 {
+    position: relative;
+    background-color: white;
+    background-image: url(../logos/HSBC.webp);
+    grid-column: 11/12;
+    grid-row: 2/3;
+}
+
+.t45 {
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.t45 .arrowOfChance {
+    position: absolute;
+    top: -18%;
+    right: 0%;
+    color: blue;
+    background: none;
+    font-size: 6vh;
+}
+
+.t46 {
+    border: none;
+    border-radius: 60%;
+    position: relative;
+    background-image: url(../logos/robbery.png);
+    border-top: 1px solid black;
+    background-color: #e3e3e3;
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.t47 {
+    position: relative;
+    border-top: 1px solid black;
+    background-color: white;
+    background-image: url(../logos/cocacola.webp);
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.t48 {
+    border-top: 1px solid black;
+    position: relative;
+    background-color: white;
+    background-image: url(../logos/TSLA.webp);
+    grid-column: 9/10;
+    grid-row: 3/4;
+}
+
+.t49 {
+    border-radius: 50% ;
+    grid-column: 10/11;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    background-color: yellow;
+}
+
+.t49 div{
+    position: absolute;
+    background: none;
+    color: red;
+    font-size: 3vw;
+}
+
+.leftarrow {
+    bottom: 30%;
+    left: 0;
+    font-size: 10vh;
+}
+
+.rightarrow{
+    top: 15%;
+    right: 0%;
+    font-size: 2vh;
+}
+
+.t49 h3 {
+    transform:translate(-50%,-50%) rotate(-90deg);
+    transform-origin: 30px, 20px;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    color: rgb(0, 132, 255);
+    background: none;
+    font-size: 2.5vh; 
+}
+
+.t50 {
+    position: relative;
+    background-image: url(../logos/casino.jpg);
+    background-color: black;
+    grid-column: 11/12;
+    grid-row: 3/4;
+}
+
+.t51 {
+    position: relative;
+    background-color: white;
+    border-bottom: 1px solid black;
+    background-image: url(../logos/bmw.webp);
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.t52 {
+    position: relative;
+    background-size: cover;
+    background-color: #101010;
+    background-image: url(../logos/netflix.webp);
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+.t53 {
+    position: relative;
+    background-color: #f5f2f2;
+    background-image: url(../logos/meta.webp);
+    grid-column: 9/10;
+    grid-row: 4/5;
+}
+
+.t54 {
+    position: relative;
+    background-color: white;
+    background-image: url(../logos/nosmoking.jpg);
+    grid-column: 11/12;
+    grid-row: 4/5;
+}
+
+.t55 {
+    border-top: none;
+    position: relative;
+    background-color: #cd2424;
+    background-image: url(../logos/ferrari.webp);
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+.t56 {
+    background-color: #cd2424;
+    position: relative;
+    background-image: url(../logos/MCD.webp);
+    grid-column: 3/4;
+    grid-row: 5/6;
+}
+
+.t57 {
+    background-color: #7eb62b;
+    position: relative;
+    background-image: url(../logos/nvidia.webp);
+    grid-column: 9/10;
+    grid-row: 5/6;
+}
+
+.t58 {
+    border-top: 1px solid black;
+    position: relative;
+    background-color: white;
+    background-image: url(../logos/nike.webp);
+    grid-column: 11/12;
+    grid-row: 5/6;
+}
+
+.t37 h1{
+    position: absolute;
+    font-size: 6vw;
+    max-width:var(--widthhh);
+    transform:translate(-50%,-50%) rotate(-30deg);
+    transform-origin: 0, 0;
+    left: 50%;
+    top: 57%;
+    background: none;
+    margin: 0;
+}
+
+.tenth-line .item2-tl{
+    height: 10vh;
+    grid-column: 3/4;
+    border-radius: 60% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    background-color: yellow;
+    font-size: 2.5vw;
+}
+
+.item2-tl h3 {
+    /* position: absolute;
+    left: 50%;
+    top: 25%; */
+    /* font-size: 30px; */
+    max-width: 100%;
+    margin: 0;
+    color: rgb(0, 132, 255);
+    background: none;
+    font-size: 2.5vw;
+}
+
+.item2-tl .toparrow {
+    border: none;
+    background: none;
+    color: red;
+    position: absolute;
+    right: 21%;
+    top: -5%;
+    font-size: 4vh;
+}
+
+.item2-tl .bottomarrow {
+    border: none;
+    background: none;
+    color: red;
+    position: absolute;
+    left: 25%;
+    /* top: 54%; */
+    bottom: -60%;
+    font-size: 4vh;
+}
+
+.firstl-1item{
+    display: flex;    
+    flex-direction: column;
+    font-size: 1.5vw;
+    position: relative;
+    background-color: yellow;
+}
+
+.dicearrow{
+    right: 5%;
+    bottom: -10%;
+    position: absolute;
+    font-size: 6vh;
+    background: none;
+    color: red;
+}
+
+.full-lines .firstl-2item{
+    background-color: rgb(175, 4, 4);
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/porche.webp);
+    position: relative;
+}
+
+
+.firstl-2item b {
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    color: white;
+    background: none;
+    
+}
+
+.firstl-3item b{
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    color: black;
+    background: none;
+}
+
+.firstl-3item{
+    position: relative;
+    background-color: yellow;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/mits.webp);
+}
+
+.firstl-4item{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-color: white;
+    background-image: url(../logos/SONY.webp);
+}
+
+.firstl-4item b {
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    color: black;
+    background: none;
+}
+
+.firstl-5item{
+    position: relative;
+    background-color: rgb(136, 138, 141)    ;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/UBER.webp);
+}
+
+.firstl-5item b, .thirdl-4item b, .thirdl-6item b, .t39 b,  .t52 b, .t57 b, .elevenl-2item b, .elevenl-8item b {
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    color: white;
+    background: none;
+}
+
+.firstl-6item{
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-position: center;
+    background-image: url(../logos/bribe.jpg);
+}
+
+.firstl-6item b {
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    color: red;
+    background: none;
+}
+
+.firstl-7item , .thirdl-8item, .t45, .item7-nl, .elevenl-10item{
+    background: linear-gradient(#bc0b17, #e5e5e5);
+}
+
+.firstl-7item span , .thirdl-8item span, .t45 span, .item7-nl span, .elevenl-10item span{
+    background: none;
+    height: 10vh;
+    grid-column: 3/4;
+    border-radius: 60% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    background-color: yellow;
+    color: rgb(0, 132, 255);
+    font-weight: bold;
+    font-size: 2.5vw;
+}
+
+.firstl-8item {
+    background-image: url(../logos/uefaCL.webp);
+    background-color: rgb(219, 33, 33);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+}
+
+.firstl-8item b{
+    background: none;
+    color: var(--win);
+    position: absolute;
+    right: 2%;
+    top: 0;
+}
+
+.firstl-9item{
+    position: relative;
+    background-color: rgb(105, 10, 10);
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/SBUX.webp);
+}
+
+.firstl-9item b {
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    color: white;
+    background: none;
+}
+
+.firstl-10item{
+    background-color: #e7e7e7;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/caterpiler.webp);
+}
+
+.firstl-10item b, .thirdl-5item  b, .thirdl-7item b, .thirdl-9item b, .thirdl-11item b, .t34 b, .t36 b, .t38 b, .t42 b, .t47 b, .t48 b, .t51 b, .t53 b, .t55 b, .t56 b, .t58 b, .item1-nl b, .item3-nl b, .item4-nl b, .item5-nl b,  .item6-nl b, .item8-nl b, .item9-nl b, .item1-tl b, .item3-tl b, .elevenl-3item b, .elevenl-4item b, .elevenl-5item b, .t44 b, .elevenl-6item b, .elevenl-7item b, .elevenl-9item b{
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    color: black;
+    background: none;
+}
+
+.firstl-11item {
+    position: relative;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(4, 4, 167);
+}
+
+.firstl-11item span{
+   background: none;
+   position: absolute;
+   font-size:5vw;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   color: #7eb62b;
+}
+
+.firstl-11item  b{
+    color: red;
+    background: none;
+    position: absolute;
+    z-index: 10;
+    font-size: 1.5vw;
+ }
+
+.secondl-1item {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/nodrink.webp);
+    background-color: white;
+}
+
+.secondl-1item b, .thirdl-3item b, .t40 b, .t43 b, .t50 b, .t54 b, .item2-nl b {
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    color: var(--lose);
+    background: none;
+}
+
+.main .full-lines .secondl-2item{
+    border: none;
+    background: none;
+    border-radius: 60%;
+    background-image: url(../logos/vor.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: rgb(240, 238, 238);
+    position: relative;
+}
+
+.secondl-2item b, .t41 b, .t46 b{
+    position: absolute;
+    right: 2%;
+    bottom: 30%;
+    color: var(--win);
+    background: none;
+}
+
+.full-lines .secondl-3item {
+    border: none;
+    border-radius: 60%;
+    background-image: url(../logos/gangster.avif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: white;
+    position: relative;
+}
+
+.secondl-3item b{
+    position: absolute;
+    right: 2%;
+    bottom: 30%;
+    color: var(--win);
+    background: none;
+}
+
+.full-lines .secondl-4item, .full-lines .secondl-5item, .full-lines .secondl-7item, .full-lines .secondl-8item, .full-lines .secondl-9item,.full-lines .thirdl-2item {
+    border-radius: 60%;
+    border: none;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-lines .thirdl-10item {
+    border-radius: 60%;
+    border: none;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.full-lines .thirdl-10item .arrowOfSharp {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    color: blue;
+    background: none;
+    font-size: 6vh;
+}
+
+.secondl-4item b,.secondl-5item b, .secondl-7item b, .secondl-8item b, .secondl-9item b, .thirdl-2item b,.thirdl-10item b{
+    color: white;
+    background: none;
+    font-size: 10vh;
+}
+
+.full-lines .secondl-6item{
+    border: none;
+    border-radius: 60%;
+    background-image: url(../logos/gunShop.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: white;
+    position: relative;
+}
+
+.secondl-6item b{
+    position: absolute;
+    right: 2%;
+    bottom: 30%;
+    color: var(--win);
+    background: none;    
+}
+
+.full-lines .secondl-10item{
+    border: none;
+    border-radius: 60%;
+    background-image: url(../logos/narkobusines.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: white;
+    position: relative;
+}
+
+.secondl-10item b{
+    position: absolute;
+    right: 2%;
+    bottom: 30%;
+    color: var(--win);
+    background: none;    
+}
+
+
+.full-lines .secondl-11item{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/siemens.png);
+    background-color: white;
+    border-top: 1px solid black;
+}
+.secondl-11item b, .thirdl-1item b{
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    color: black;
+    background: none;
+}
+.full-lines .thirdl-1item{
+    border-top: 1px solid black;
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/SNPS.png);
+}
+
+.full-lines .thirdl-3item{
+    border-top: 1px solid white;
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/bellagio.jpg);
+}
+
+
+.full-lines .thirdl-4item{
+    border-top: 1px solid white;
+    position: relative;
+    background-color: #dd2727;    
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/ORCL.webp);
+}
+
+.thirdl-5item{
+    border-top: 1px solid white;
+    position: relative;
+    background-color: rgb(249 243 243);   
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/samsung.webp);
+}
+
+.thirdl-6item{
+    border-top: 1px solid white;
+    position: relative;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/visa.webp);
+}
+
+.thirdl-7item{
+    border-top: 1px solid white;
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/nestle.webp);
+}
+
+.thirdl-9item{
+    border-top: 1px solid white;
+    position: relative;
+    background-color:#ff7200;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/Hermes.webp);
+}
+
+.full-lines .thirdl-11item{
+    border-top: 1px solid black;
+    position: relative;
+    background-color:white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/boeing.webp);
+}
+
+.item3-nl{
+    background-color: white;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/apple.webp);
+}
+
+.nineth-line .item4-nl{
+    position: relative;
+    border-left: 1px solid black;
+    grid-column: 5/6;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-position: center;
+    background-image: url(../logos/MSFT.webp);
+}
+
+.nineth-line .item5-nl{
+    position: relative;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    grid-column: 6/7;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-position: center;
+    background-image: url(../logos/saudi.webp);
+}
+
+.item6-nl{
+    grid-column: 7/8;
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/google.webp);
+}
+
+.nineth-line .item8-nl{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-position: center;
+    background-image: url(../logos/amazon.webp);
+    background-color: white;
+}
+.nineth-line .item9-nl{
+    border-top: 1px solid black;
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/disney.webp);
+}
+
+.tenth-line .item1-tl{
+    border-top: 1px solid black;
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/PYPL.webp)
+}
+
+.tenth-line .item3-tl{
+    border-top: 1px solid black;
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/intel.webp)
+}
+
+.full-lines .elevenl-1item{
+    border-top: 1px solid black;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/police.jpg)
+}
+
+.full-lines .elevenl-2item{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    position: relative;
+    background-color: #f55922;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/xiaomi.webp)
+}
+
+.elevenl-3item{
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/gazprom.webp)
+}
+
+.full-lines .elevenl-4item{ 
+    position: relative;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/EA.webp)
+}
+
+.elevenl-5item{
+    background-color: white;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/adidas.webp)
+}
+
+.full-lines .elevenl-6item{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color: white;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/SPOT.webp)
+}   
+
+.elevenl-7item{
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/ORAN.webp)
+}
+
+.full-lines .elevenl-8item{
+    border-left:1px solid black ;
+    border-right:1px solid black ;
+    position: relative;
+    background-color: #ff1e1e;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/h&m.webp)
+}
+
+.elevenl-9item{
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/EBAY.webp)
+}
+
+.full-lines .elevenl-11item{
+    border-top: 1px solid black;
+    position: relative;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center;
+    background-image: url(../logos/start.jpg)
+}
+
